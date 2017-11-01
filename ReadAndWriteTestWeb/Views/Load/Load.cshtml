@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Load";
+}
+
+<h2>Load</h2>
+@ViewBag.result
+
+@using (Html.BeginForm("LoadFile", "Load", FormMethod.Post)) { 
+<input type="text" size="30" name="txtCaminhoArquivo" value="C:\Users\Maicol\Downloads\load.txt" />
+<button type="submit">Enviar</button>
+}
+<input type="button" id="Carregar" onclick="location.href='@Url.Action("LoadFile", "Load")'" />
+
